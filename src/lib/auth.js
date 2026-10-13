@@ -7,13 +7,13 @@ import { betterAuth } from "better-auth";
 import { mongodbAdapter } from "@better-auth/mongo-adapter";
 import { MongoClient } from "mongodb";
 
-const mongoUri = process.env.MONGODB_URI;
+const mongoUri = process.env.MONGODB_URL
 
-if (!mongoUri) {
-  throw new Error(
-    "MONGODB_URI is missing. Check your .env.local file."
-   );
- }
+//if (!mongoUri) {
+  //throw new Error(
+    //"MONGODB_URI is missing. Check your .env.local file."
+   //);
+ //}
 
 const client =  new MongoClient(mongoUri);
 const db = client.db("bazardor");
