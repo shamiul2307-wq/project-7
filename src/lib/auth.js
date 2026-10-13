@@ -15,7 +15,7 @@ const mongoUri = process.env.MONGODB_URL
    //);
  //}
 
-const client =  new MongoClient(mongoUri);
+const client =   MongoClient(mongoUri);
 const db = client.db("bazardor");
 
 export const auth = betterAuth({
